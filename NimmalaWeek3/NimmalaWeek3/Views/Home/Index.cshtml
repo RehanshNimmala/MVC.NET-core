@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+@*
+    Created by Nimmala
+    2222222222222222
+*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>ViewData["Title"]</title>
+</head>
+<body>
+
+
+    <h1> Nimmala Week 3 - Simple Binding</h1>
+
+    <p>
+        There are two submit buttons.
+    </p>
+    @*
+        The two submit buttons are one for each form.Basic principles that the controls within the form are submitted
+        when a submit button is clicked.
+        Also, the form has a method, controller name and action method name.
+        The controllers inside the form are mapped to the names of the parameters inside the methods in the controller.
+        * Make sure to have the taghelpers directive inside viewImports file to use the taghelpers ad follows:
+        @addTagHelper *,Microsoft.AspNetcore.MVC.Taghelpers
+
+    *@
+    <p>
+    <form  asp-controller="Home" asp-action="Index" method="post">
+        <label> Please enter a Number</label>
+        <input type="text" name="number" />
+        <input type="submit" value="Submit" />
+    </form>
+    </p>
+
+    
+        <p><form asp-contoller="Home" asp-action="WithName" method="post">
+            <label>Please enter a number between 1 and 9</label>
+            <input type="number" name="number" min="0" max="9" />
+            <input type="text" name="name" />
+            <input type="submit" value="submit" />
+        </form><p/>
+    
+
+    @*
+        This portion will show data only when there is data to show.
+    *@
+    <p>@Html.Raw( ViewBag.Result)</p>
+    @*
+        HtmlRaw() method will render html tags as html if there are any inside  string when displaying in browser.
+    *@
+</body>
+</html>
+
