@@ -1,0 +1,33 @@
+﻿
+
+@model practise2.Models.Agemodel
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Age Calculator</title>
+    </head>
+
+    <body>
+        <h1> Welcome</h1>
+        <form asp-controller="Home"asp-action="Index"method="post">
+            <p>
+                <label asp-for="Name">Please Enter the Name</label>
+                <input asp-for="Name" />
+
+            </p>
+            <p>
+                <label asp-for="Year">Please Enter the year of Birth</label>
+                <input asp-for="Year" />
+            </p>
+            <p>
+                <button type="submit">submit</button>
+            </p>
+
+        </form>
+    </body>
+</html>
+
+
+
