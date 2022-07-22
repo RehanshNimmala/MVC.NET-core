@@ -6,13 +6,14 @@ namespace MyPractise.Controllers
     {
         public IActionResult Index()
         {
-            string todaysDate = DateTime.Now.ToString();
             string message = "Welcome NAVEEN";
-            
+
+            string todaysDate = DateTime.Now.ToString();
+
             // creating data for sending to the view
+            ViewBag.Message = message;
 
             ViewBag.TodaysDate = $"Today's date is { todaysDate}";
-            ViewBag.Message = message;
             return View();
         }
 
