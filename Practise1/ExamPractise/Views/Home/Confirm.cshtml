@@ -1,0 +1,33 @@
+﻿@model ExamPractise.Models.BillModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport"content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css~/css/site.css" />
+</head>
+<body>
+    <h1>Billing Confirmation</h1>
+    <table>
+        <tr>
+            <td>Customer name</td>
+            <td> @Model.CustomerName</td>
+        </tr>
+        <tr>
+            <td>Software:</td>
+            <td>@Model.GetSelectedSoftware()</td>
+        </tr>
+        <tr>
+            <td>Monthly Charge:</td>
+            <td>@Model.GetMonthlyCharge()</td>
+        </tr>
+    </table>
+
+</body>
+
+
+</html>
