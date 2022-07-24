@@ -1,0 +1,22 @@
+﻿@model AreaPractise.Models.Model
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Nimmala Exam Practise</title>
+    </head>
+    <body>
+        <h1> Calculation practise</h1>
+        <p>Checking whether the given number is divided by 5 or 10</p>
+        <form  asp-controller="Home"asp-action="Index" method="post">
+            <p>
+                <label asp-for="number">Please enter a number</label>
+                <input asp-for="number" type="number" />
+
+                <button type="submit">Submit</button>
+
+            </p>
+
+        </form>
+    </body>
+</html>
