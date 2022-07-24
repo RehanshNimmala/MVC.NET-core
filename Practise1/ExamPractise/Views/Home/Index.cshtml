@@ -1,0 +1,45 @@
+﻿@using ExamPractise.Models
+@using Microsoft.AspNetCore.Mvc.TagHelpers;
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
+@model BillModel
+
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css~/css/site.css" />
+</head>
+
+<body>
+    <h1>Software billing form</h1>
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <div>
+            <p>
+                <label asp-for="CustomerName">Customer Name:</label>
+                <input asp-for="CustomerName" />
+            </p>
+            <p>
+                <label>Select Software Package:</label>
+                <select asp-for="SoftwareCode"asp-items="Model.SoftwareList"></select>
+
+            </p>
+            <p>
+                <label asp-for="Users">Number of Users:</label>
+                <input asp-for="Users" />
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </div>
+    </form>
+
+</body>
+</html>
