@@ -1,0 +1,32 @@
+﻿@model CalculateBulkDensity.Models.Model
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Calculations</title>
+    </head>
+    <body>
+        <h1>Bulk Density Calcultion</h1>
+        <p>
+           <ul>
+            <li>Tare the measuring cylinder and add the material into it.</li>
+            <li>Note the reading of the material in the cylinder in (ml).Note it as volume.</li>
+            <li>Measure the mass of the measuring cylinder with material inside it in grams(g).Note it as mass</li>
+            <li>Calculate the density as g/ml.</li>
+        </ul>
+            
+        </p>
+        <form asp-controller="Home"asp-action="Index"method="post">
+            <p>
+                <label asp-for="mass">Please enter the mass (g)</label>
+                <input asp-for="mass" type="number"step="any"  /> </p>
+
+                <p> <label asp-for="volume">Please enter the volume(ml)</label>
+                <input asp-for="volume" type="number"step="any" /> </p>
+
+                <p><button type="submit">Calculate Density</button></p>
+           
+        </form>
+    </body>
+</html>
+
