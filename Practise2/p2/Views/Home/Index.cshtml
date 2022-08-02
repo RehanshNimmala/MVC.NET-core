@@ -1,0 +1,32 @@
+﻿@model p2.Models.HelloModel
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My Test</title>
+    </head> 
+
+    <body>
+
+        <form asp-controller="Home" asp-action="Index" method="Post">
+            <p>
+                <label asp-for="Name">Please enter the Name</label>
+                <input asp-for="Name">
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+            <p>
+                <label asp-for="Number">Please enter a number</label>
+                <input asp-for="Number" />
+            </p>
+             <p>
+                <button type="submit">Submit</button>
+            </p>
+
+
+        </form>
+
+
+    </body>
+</html>
