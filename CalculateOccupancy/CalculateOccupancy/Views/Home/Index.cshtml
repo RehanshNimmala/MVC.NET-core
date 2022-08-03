@@ -1,0 +1,37 @@
+﻿@model CalculateOccupancy.Models.Model
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="utf-8>" />
+    <title>Occupancy Calculation</title>
+
+    </head>
+    <body>
+        <h1>Occupancy calculation for Equipment</h1>
+        <p>To calculate the occupancy we need bulk density of the material to be loaded.
+
+        </p>
+        <form asp-controller="Home" asp-action="Index"method="post">
+            <p><ol>
+                <label asp-for="capacity">Capacity of the Equipment in Liters(l)</label>
+                <input asp-for="capacity" type="number"step="any" /><br />
+
+                <label asp-for="bulkDensity">Bulk density of the material</label>
+                <input asp-for="bulkDensity" type="number" step="any"/><br />
+
+                <label asp-for="quantity">Quqntity of the material in kg</label>
+                <input asp-for="quantity" type="number"step="any" /><br />
+
+                <button type="submit">Calculate Occupancy</button>
+            </ol>
+                
+            </p>
+
+
+        </form>
+        
+
+    </body>
+  
+
+</html>
