@@ -11,6 +11,34 @@
         <p>To calculate the occupancy we need bulk density of the material to be loaded.
 
         </p>
+        <p>
+
+        <form asp-controller="BulkDensity" asp-action="Index" method="post">
+            <label> Please enter the weight in (g)</label>
+            <input type="text" name="weight" />
+             <label> Please enter the volume in (ml)</label>
+             <input type="text" name="volume" />
+
+            <input type="submit" value="Submit" />
+
+
+
+
+            
+            @*@<label asp-for="weight">Mass of the material in (g)</label>
+            <input asp-for="weight"type="number"step="any" />
+            <label asp-for="volume">Volume in measuring cylinder in (ml)</label>
+            <input asp-for="volume" type="number"step="any" />
+
+            <button type="submit">Calculate Bulk Density</button>*@
+
+            
+          
+
+        </form>
+        </p>
+                    <p>@Html.Raw(ViewBag.Result)</p>
+
         <form asp-controller="Home" asp-action="Index"method="post">
             <p><ol>
                 <label asp-for="capacity">Capacity of the Equipment in Liters(l)</label>
