@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+
 namespace WeightConversion.Models
 
 {
@@ -9,22 +10,22 @@ namespace WeightConversion.Models
         public double Weight { get; set; }
         public string? WeightUnit { get; set; }
 
-        public string ConvertWeight()
+        public double ConvertWeight()
         {
             double conversionResult = 0;
-            string result = "";
+            double result = 0;
             switch (WeightUnit)
             {
                 case "Kg2P":
                     conversionResult = Weight * 2.205;
-                    result =conversionResult.ToString();    
+                   result =conversionResult;    
                     break;
                 case "P2Kg":
                     conversionResult = Weight / 2.205;
-                    result = conversionResult.ToString();   
+                   // result = conversionResult;   
                     break;
             }
-            return result;
+            return conversionResult;
 
         }
 

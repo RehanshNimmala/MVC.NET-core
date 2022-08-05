@@ -13,7 +13,7 @@ namespace WeightConversion.Controllers
                 
         }
         [HttpPost]
-        public IActionResult WeightConversion(UnitConversionModel model)
+        public IActionResult UnitConversion(UnitConversionModel model)
         {
             return View("Results",model);
         }
