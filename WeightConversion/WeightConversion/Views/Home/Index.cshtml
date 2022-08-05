@@ -15,10 +15,13 @@
            <p>
                <label asp-for="Weight">Please enter Weight  </label>
                <input asp-for="Weight" type="number" />
-               <label asp-for="WeightUnit">Convert Kg to P</label>
+
+               <label asp-for="WeightUnit">Convert Kilogram(kg) to Pounds(Lb)</label>
                <input asp-for="WeightUnit" value="Kg2P" type="radio" />
-               <label asp-for="WeightUnit"class="1space">Convert P to Kg</label>
+
+               <label asp-for="WeightUnit">Convert Pounds(Lb) to Kilogram(Kg)</label>
                <input asp-for="WeightUnit" value="P2Kg"type="radio" />
+
                <span asp-validation-for="WeightUnit">  </span>
            </p>
            <p>
