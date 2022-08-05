@@ -4,17 +4,26 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CalculateOccupancy.Controllers
 {
+
     public class BulkDensityController : Controller
         
     {
-        [HttpPost]
-        public IActionResult Index(double weight,double volume)
+        public IActionResult Index()
         {
-            double density = weight / volume;
-            ViewBag.Result= $"The Bulk density of the material is {density}";
+            return View();
+            //Index()
+        }
+        [HttpPost]
+        public IActionResult Test(double weight,double volume)
+        {
+            if (ModelState.IsValid)
+            {
+                double density = weight / volume;
+                ViewBag.Result = $"The Bulk density of the material is {density}";
+            }
 
-            return RedirectToAction("Index","Home",density);
-            //return View("Index");
+            //return RedirectToAction("Index","Home",density);
+            return View ("Index");
         }
     }
 }
