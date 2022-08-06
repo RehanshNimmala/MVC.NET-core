@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta @*name="viewport" content="width=device-width"*@ charset="utf-8" />
+    <title>ViewData["Title"]</title>
+    </head>
+    <body>
+        <h1>Naveen P3</h1>
+        <p>
+            <form asp-controller="Home" asp-action="Index" method="Post">
+                <label >Please enter a number</label>
+                <input type="text" name="number" />
+                <input type="submit" value="Submit" />
+
+             </form>
+        </p>
+        <p>
+            <form asp-controller="Home" asp-action="WithName" method="Post">
+            <label >Please enter a number between 1 and 3</label>
+            <input type="number" name="number" min="0" max="3" />
+            <input type="text" name="name" />
+            <input type="submit" value="Submit" /></form>
+            
+
+        </p>
+        <p>@Html.Raw(ViewBag.Result)</p>
+       
+    </body>
+</html>
+
+
