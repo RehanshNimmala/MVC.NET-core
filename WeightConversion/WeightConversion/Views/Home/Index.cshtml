@@ -10,23 +10,31 @@
    </head>
    <body>
        <h1> Weight conversion</h1>
-       <form asp-controller="Home"asp-action="UnitConversion"method="post">
+       <form asp-controller="Home"asp-action="Index"method="post">
 
            <p>
-               <label asp-for="Weight">Please enter Weight  </label>
-               <input asp-for="Weight" type="number" />
+               <label asp-for="weight">Please enter Weight  </label>
+               <input asp-for="weight" type="number" step="any" />
 
-               <label asp-for="WeightUnit">Convert Kilogram(kg) to Pounds(Lb)</label>
-               <input asp-for="WeightUnit" value="Kg2P" type="radio" />
+               <label asp-for="weightUnit">Convert Kilogram(kg) to Pounds(Lb)</label>
+               <input asp-for="weightUnit" value="Kg2P" type="radio" />
 
-               <label asp-for="WeightUnit">Convert Pounds(Lb) to Kilogram(Kg)</label>
-               <input asp-for="WeightUnit" value="P2Kg"type="radio" />
+               <label asp-for="weightUnit"class="1space">Convert Pounds(Lb) to Kilogram(Kg)</label>
+               <input asp-for="weightUnit" value="P2Kg"type="radio" />
 
-               <span asp-validation-for="WeightUnit">  </span>
+               <span asp-validation-for="weightUnit">  </span>
            </p>
            <p>
                <button type="submit">Submit</button>
            </p>
        </form>
-       </body>
-       </html>
+    @*@{
+        if (ViewBag.RoundTrip == "RoundTrip")
+        {
+            <p>@Html.Raw(Model.ConvertWeight())</p>
+        }
+    }*@
+
+    </body>
+
+</html>

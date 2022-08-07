@@ -7,22 +7,23 @@ namespace WeightConversion.Models
     {
         [Required(ErrorMessage ="please enter the weight")]
         [Display(Name ="please enter weight as integer or decimal")]
-        public double Weight { get; set; }
-        public string? WeightUnit { get; set; }
+        public double weight { get; set; }
+        public string? weightUnit { get; set; }
 
         public double ConvertWeight()
         {
             double conversionResult = 0;
-            double result = 0;
-            switch (WeightUnit)
+            string result = "";
+            switch (weightUnit)
             {
                 case "Kg2P":
-                    conversionResult = Weight * 2.205;
-                   result =conversionResult;    
+                    conversionResult = weight * 2.205;
+                    result = $"{weight:N2}Kg  ={conversionResult:N2} Lb";
                     break;
+
                 case "P2Kg":
-                    conversionResult = Weight / 2.205;
-                   // result = conversionResult;   
+                    conversionResult = weight / 2.205;
+                    result = $"{weight:N2}Lb  ={conversionResult:N2} Kg";
                     break;
             }
             return conversionResult;
