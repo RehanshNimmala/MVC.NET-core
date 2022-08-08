@@ -1,0 +1,45 @@
+﻿@model DropdownPractise.Models.BMICalculation
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>BMI Calculation</title>
+    </head>
+    <body>
+        <h1>BMI Calculation</h1>
+
+        <form asp-controller="Home"asp-action="Index"method="post">
+            <div>   
+                <p>
+                    <label asp-for="Name">Your Name</label>
+                    <input asp-for="Name" type="text" />
+                </p>
+
+                <p>
+                    <label>Please select your Gender</label>
+                    <select asp-for="Gender" asp-items="Model.GenderList"></select>
+                </p>
+                <p>
+                    <label asp-for="Weight">Please enter your weight in Kg</label>
+                    <input asp-for="Weight" type="number" step="any" />
+                </p>
+                <p>
+                     <label asp-for="Height">Please enter your Height in cm </label>
+                    <input asp-for="Height" type="number" step="any" />
+                </p>
+                <p>
+                    <button type="submit">Calculate BMI</button>
+           
+               </p>
+
+
+            </div>
+        </form>
+
+    </body>
+
+</html>
