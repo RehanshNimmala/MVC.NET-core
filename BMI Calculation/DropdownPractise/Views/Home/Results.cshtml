@@ -1,0 +1,27 @@
+﻿@model DropdownPractise.Models.BMICalculation
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>BMI Calculation</title>
+</head>
+<body>
+    <h1>Body Mass Index (BMI) Calculation</h1>
+    <p>
+        The height of @Model.Name is @Model.Height Cm<br />
+
+        <p> The weight of @Model.Name is @Model.Weight Kg</p>
+
+        The BMI is @Model.CalculateBMI()
+    </p>
+    <p>
+        <p style="color:blue"> BMI Reference Values:</p>
+      Below 18.5: <p style="color:gold"> you're in the underweight range. </p> 
+        Between 18.5 and 24.9 <p style="color:green"> you're in the healthy weight range. </p> 
+        Between 25 and 29.9:<p style="color:orange"> you're in the overweight range.</p>
+        Between 30 and 39.9:<p style="color:red"> you're in the obese range.
+
+    </p>
+</body>
+</html>
+
