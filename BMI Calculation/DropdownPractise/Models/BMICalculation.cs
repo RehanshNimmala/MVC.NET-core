@@ -17,6 +17,13 @@ namespace DropdownPractise.Models
             new SelectListItem {Text="Female"}
 
         };
+        public double CalculateBMI()
+        {
+            double bmi = (Weight / Height/Height)* 10000;
+            double result=Math.Round(bmi,2);
+
+            return result;
+        }
 
     }
 }

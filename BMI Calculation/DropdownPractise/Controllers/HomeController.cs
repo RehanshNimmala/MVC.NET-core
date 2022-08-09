@@ -11,11 +11,10 @@ namespace DropdownPractise.Controllers
         {
             return View(new BMICalculation());
         }
-        /*[HttpPost]
-        public IActionResult Index()
+        [HttpPost]
+        public IActionResult CalculateBMI(BMICalculation model)
         {
-            var model = new BMICalculation();
-            return View(model);
-        }*/
+            return View("Results",model);
+        }
     }
 }
