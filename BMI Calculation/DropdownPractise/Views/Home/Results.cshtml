@@ -7,13 +7,14 @@
 </head>
 <body>
     <h1>Body Mass Index (BMI) Calculation</h1>
-    <p>
-        The height of @Model.Name is @Model.Height Cm<br />
+    <p>Hi @Model.GetName()</p>
 
-        <p> The weight of @Model.Name is @Model.Weight Kg</p>
+    <p> Your Height is @Model.Height Cm </p>
 
-        The BMI is @Model.CalculateBMI()
-    </p>
+        <p> Your Weight is @Model.Weight Kg</p>
+
+        <p>The BMI is @Model.CalculateBMI() </p>
+        
     <p>
         <p style="color:blue"> BMI Reference Values:</p>
       Below 18.5: <p style="color:gold"> you're in the underweight range. </p> 
